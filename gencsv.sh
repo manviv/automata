@@ -1,3 +1,4 @@
+#!/bin/bash
 #echo "enter number $number"
 #read number
 number=$1

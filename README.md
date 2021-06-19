@@ -8,6 +8,10 @@ Manual Codes to get the Container and setup running and talking to each other.
 
 docker pull docker.io/infracloudio/csvserver:latest
 
+#Run the gencsv file with /bin/bash
+
+./gencsv.sh <your input>|<blank> | tee inputFile
+
 #Get the container port
  
 CPort=`docker image inspect 8cb989ef80b5 | grep "tcp" | uniq | sed 's/"//g;s/ //g' | awk -F / '{print $1}'`
