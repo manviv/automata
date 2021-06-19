@@ -20,5 +20,7 @@ CPort=`docker image inspect 8cb989ef80b5 | grep "tcp" | uniq | sed 's/"//g;s/ //
 
 `docker exec -d keviv ./csvserver`
 
+# Docker compose
 
+docker-compose --verbose up "from the repo as pwd"
 
