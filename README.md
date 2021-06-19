@@ -24,3 +24,5 @@ CPort=`docker image inspect 8cb989ef80b5 | grep "tcp" | uniq | sed 's/"//g;s/ //
 
 docker-compose --verbose up "from the repo as pwd"
 
+#Find container ip of csvserver
+`docker exec -it keviv ifconfig | grep -v 127 | grep inet | awk '{print $2}'`

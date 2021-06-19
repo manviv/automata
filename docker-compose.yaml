@@ -1,3 +1,4 @@
+version: "2.1"
 services:
   csvserver:
     image: infracloudio/csvserver
@@ -9,3 +10,11 @@ services:
     volumes:
       - /root/infra/csvserver/solution/inputFile:/csvserver/inputdata
     command: "/csvserver/csvserver"
+
+  monit:
+    image: prom/prometheus
+    container_name: monit
+    ports:
+      - "9090:9090"
+    volumes:
+      - /root/infra/csvserver/solution/prometheus.yaml:/etc/prometheus/prometheus.yml
