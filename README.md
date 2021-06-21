@@ -10,7 +10,7 @@ docker pull docker.io/infracloudio/csvserver:latest
 
 #Run the gencsv file with /bin/bash
 
-./gencsv.sh <your input>|<blank> | tee inputFile
+./gencsv.sh val | tee inputFile
 
 #Get the container port
  
