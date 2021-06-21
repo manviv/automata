@@ -30,5 +30,4 @@ docker-compose --verbose up "from the repo as pwd"
 
 #Find container ip of csvserver and update yaml
 
-`docker exec -it keviv ifconfig | grep -v 127 | grep inet | awk '{print $2}'`
-`echo $ip | sed -i "s/pvtip/$ip/g" prometheus.yaml`
+Note: When you are on the same compose you share the bridge and hence the name's of container would be enough for /etc/resolve
